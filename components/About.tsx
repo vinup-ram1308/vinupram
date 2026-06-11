@@ -6,7 +6,7 @@ const facts = [
   { emoji: "⚽", title: "Sports Fanatic", desc: "Footballer, badminton state player, Kho-Kho athlete who represented university thrice at national level." },
   { emoji: "🧩", title: "Puzzle Solver", desc: "Loves a good logic puzzle — which explains the jump into data science." },
   { emoji: "💃", title: "Occasional Dancer", desc: "Dances for fun. No further questions." },
-  { emoji: "🏙️", title: "Bengaluru Born", desc: "Proudly from the Silicon Valley of India — tech is in the city's DNA." },
+  { emoji: "🏙️", title: "Bengaluru Based", desc: "Proudly from the Silicon Valley of India — tech is in the city's DNA." },
 ];
 
 export default function About() {
