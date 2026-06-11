@@ -4,32 +4,32 @@ const skillGroups = [
   {
     label: "Languages",
     accent: "teal",
-    skills: ["Python", "R", "SQL", "Java", "JavaScript", "HTML/CSS", "C", "LaTeX"],
+    skills: ["Python", "R", "SQL", "Java", "JavaScript", "LaTeX", "HTML/CSS"],
   },
   {
-    label: "ML / AI & Data",
+    label: "Analytics & Data",
     accent: "coral",
-    skills: ["Scikit-learn", "TensorFlow", "Deep Learning", "ETL/ELT Pipelines", "Data Visualization", "Google ADK", "Gemini API", "LangChain"],
+    skills: ["Pandas", "NumPy", "Scikit-learn", "TensorFlow", "Statistical Modelling", "ETL/ELT Pipelines", "Data Quality Validation", "A/B Testing", "Google ADK", "LangChain"],
   },
   {
     label: "Cloud & Infrastructure",
     accent: "amber",
-    skills: ["GCP", "BigQuery", "Vertex AI", "Cloud Run", "Microsoft Azure", "Azure OpenAI", "Azure AI Services", "Azure AI Search"],
+    skills: ["GCP", "BigQuery", "Vertex AI", "Cloud Run", "Microsoft Azure", "Azure OpenAI", "Azure AI Services", "Cloud-native Architectures"],
   },
   {
     label: "BI & Visualization",
     accent: "purple",
-    skills: ["Power BI", "DAX", "Power Query", "Excel", "Interactive Dashboards"],
+    skills: ["Power BI", "DAX", "Power Query", "Excel (Advanced)", "Data Visualization", "Interactive Dashboards"],
   },
   {
     label: "Tools & Practices",
     accent: "teal",
-    skills: ["FastAPI", "Git", "A/B Testing", "Agile", "Data Structures & Algorithms", "Copilot", "AI Agents"],
+    skills: ["FastAPI", "Git", "Agile", "Documentation", "Data Structures & Algorithms", "Google ADK", "AI Agents"],
   },
   {
     label: "Currently Learning",
     accent: "coral",
-    skills: ["Interactive Dashboard Design", "GCP Analytics", "Advanced LLM Architectures", "Agentic Workflows"],
+    skills: ["Advanced Dashboard Design", "GCP Analytics", "Agentic Workflows", "Keyboard 🎹"],
   },
 ];
 
@@ -68,16 +68,32 @@ export default function Skills() {
           ))}
         </div>
 
-        {/* Fun strikethrough section */}
-        <div style={{ marginTop: 48, padding: "24px 32px", borderRadius: 16, border: "1px solid var(--border)", background: "rgba(255,255,255,0.02)" }}>
-          <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--text-muted)", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 12 }}>
-            // as never featured in — yet
+        {/* Fun data terminal block */}
+        <div style={{ marginTop: 48, padding: "24px 32px", borderRadius: 16, background: "var(--bg-card)", border: "1px solid var(--border)", fontFamily: "var(--font-mono)" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 16 }}>
+            <div style={{ width: 10, height: 10, borderRadius: "50%", background: "var(--coral)" }} />
+            <div style={{ width: 10, height: 10, borderRadius: "50%", background: "var(--amber)" }} />
+            <div style={{ width: 10, height: 10, borderRadius: "50%", background: "var(--teal)" }} />
+            <span style={{ fontSize: 11, color: "var(--text-muted)", marginLeft: 8 }}>vinup@portfolio ~ $</span>
           </div>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 16 }}>
-            {["Forbes 30 Under 30", "TechCrunch", "YourStory", "LinkedIn Top Voice", "Shark Tank India", "Y Combinator", "Google I/O Stage"].map(t => (
-              <span key={t} style={{ fontFamily: "var(--font-display)", fontSize: 14, color: "var(--text-muted)", textDecoration: "line-through", textDecorationColor: "var(--teal)" }}>{t}</span>
+          <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+            {[
+              { cmd: "describe_vinup --trait superpower", out: "Turns 500K row datasets into boardroom-ready insights 📊" },
+              { cmd: "vinup.hobbies.random()", out: '["singing", "football", "guitar", "puzzles", "keyboard"] — pick one, he\'s done it today' },
+              { cmd: "git log --oneline --author=Vinup", out: "feat: deployed ML agent on GCP ✦ fix: automated 4 audit workflows ✦ feat: nailed PL-300 + AI-102" },
+              { cmd: "vinup --currently-learning", out: "Interactive dashboards, GCP analytics, advanced agentic workflows... and keyboard scales 🎹" },
+            ].map((l, i) => (
+              <div key={i}>
+                <div style={{ fontSize: 12, color: "var(--teal)" }}>
+                  <span style={{ color: "var(--text-muted)" }}>$ </span>{l.cmd}
+                </div>
+                <div style={{ fontSize: 12, color: "var(--text-secondary)", paddingLeft: 12, marginTop: 2 }}>→ {l.out}</div>
+              </div>
             ))}
-            <span style={{ fontFamily: "var(--font-display)", fontSize: 14, color: "var(--teal)", fontStyle: "italic" }}>· yet ·</span>
+            <div style={{ fontSize: 12, color: "var(--teal)", marginTop: 4 }}>
+              <span style={{ color: "var(--text-muted)" }}>$ </span>
+              <span style={{ borderRight: "2px solid var(--teal)", paddingRight: 2, animation: "pulse-dot 1s ease-in-out infinite" }}> </span>
+            </div>
           </div>
         </div>
       </div>

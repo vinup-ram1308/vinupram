@@ -3,22 +3,32 @@
 const projects = [
   {
     name: "CareerCompass",
-    year: "2026",
+    year: "Apr 2026",
     status: "shipped",
-    tagline: "Multi-agent ML career intelligence platform",
-    desc: "Built and deployed a multi-agent ML solution on GCP for Google Gen AI Academy APAC. Architected ETL pipelines on BigQuery enabling real-time trend analysis across large structured datasets. Deployed production-ready on Cloud Run with Vertex AI inference.",
+    tagline: "Multi-agent ML career intelligence platform on GCP",
+    desc: "Built and deployed a multi-agent ML solution for Google Gen AI Academy APAC. Designed scalable ETL pipelines on BigQuery for real-time trend analysis, and deployed end-to-end on Cloud Run with Vertex AI inference following production-ready architecture standards.",
     tags: ["Google ADK", "Gemini 2.5 Flash", "Vertex AI", "BigQuery", "Cloud Run"],
     accent: "teal",
-    link: "https://github.com/vinup-ram1308",
+    link: "https://github.com/vinup-ram1308/career-compass",
+  },
+  {
+    name: "Bank Marketing Campaign Analysis",
+    year: "Jun 2026",
+    status: "shipped",
+    tagline: "Full-stack data analysis on 41,000+ customer interactions",
+    desc: "Analysed a retail bank's direct marketing campaigns, engineered features, wrote 15+ SQL queries for segmentation, and identified a 6.9x conversion gap. Validated findings with chi-square and t-tests (p < 0.0001). Delivered a 4-page Power BI dashboard with a budget recommendation projecting conversion improvement from 11% to 50–65%.",
+    tags: ["Python", "MySQL", "Power BI", "SciPy", "Statistical Modelling"],
+    accent: "coral",
+    link: "https://github.com/vinup-ram1308/bank-marketing-analysis",
   },
   {
     name: "NoteBridge App",
     year: "2025",
     status: "shipped",
     tagline: "AI-powered structured + unstructured data processor",
-    desc: "Designed and implemented an AI-powered application processing both structured and unstructured data — audio and handwritten images. Built a Python/FastAPI backend handling real-time ML inference and data transformation end-to-end.",
+    desc: "AI-powered application processing both structured and unstructured data — audio and handwritten images. Built a Python/FastAPI backend handling real-time ML inference and data transformation end-to-end.",
     tags: ["Whisper AI", "EasyOCR", "Python", "FastAPI", "LaTeX"],
-    accent: "coral",
+    accent: "amber",
     link: "https://github.com/vinup-ram1308",
   },
   {
@@ -28,8 +38,8 @@ const projects = [
     tagline: "Conversational analytics assistant",
     desc: "An intelligent data analyst agent that interprets natural language queries, runs analyses, and surfaces insights — bridging the gap between raw data and business understanding.",
     tags: ["Python", "AI Agents", "LangChain", "GCP"],
-    accent: "amber",
-    link: "https://github.com/vinup-ram1308",
+    accent: "purple",
+    link: "https://github.com/vinup-ram1308/data-analyst-agent",
   },
 ];
 
@@ -37,6 +47,7 @@ const accentMap: Record<string, { color: string; dim: string }> = {
   teal: { color: "var(--teal)", dim: "var(--teal-dim)" },
   coral: { color: "var(--coral)", dim: "var(--coral-dim)" },
   amber: { color: "var(--amber)", dim: "var(--amber-dim)" },
+  purple: { color: "var(--purple)", dim: "var(--purple-dim)" },
 };
 
 export default function Projects() {
@@ -77,7 +88,8 @@ export default function Projects() {
                     {p.tags.map(t => <span key={t} className="tag">{t}</span>)}
                   </div>
                 </div>
-                <a href={p.link} target="_blank" rel="noopener noreferrer" style={{ flexShrink: 0, display: "inline-flex", alignItems: "center", gap: 6, padding: "8px 16px", borderRadius: 100, border: "1px solid var(--border-hover)", color: "var(--text-secondary)", fontSize: 12, fontFamily: "var(--font-mono)", textDecoration: "none", transition: "all 0.2s", whiteSpace: "nowrap" }}
+                <a href={p.link} target="_blank" rel="noopener noreferrer"
+                  style={{ flexShrink: 0, display: "inline-flex", alignItems: "center", gap: 6, padding: "8px 16px", borderRadius: 100, border: "1px solid var(--border-hover)", color: "var(--text-secondary)", fontSize: 12, fontFamily: "var(--font-mono)", textDecoration: "none", transition: "all 0.2s", whiteSpace: "nowrap" }}
                   onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.color = a.color; (e.currentTarget as HTMLAnchorElement).style.borderColor = a.color; }}
                   onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.color = "var(--text-secondary)"; (e.currentTarget as HTMLAnchorElement).style.borderColor = "var(--border-hover)"; }}
                 >

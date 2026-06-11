@@ -85,21 +85,22 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Photo placeholder */}
+          {/* Photo */}
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 12 }} className="animate-float">
             <div style={{
               width: 260, height: 320,
               borderRadius: 24,
               border: "1px solid var(--border-hover)",
-              background: "linear-gradient(135deg, var(--bg-card2) 0%, var(--bg-card) 100%)",
-              display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 12,
-              position: "relative", overflow: "hidden",
+              overflow: "hidden",
+              position: "relative",
+              boxShadow: "0 0 40px rgba(0,212,168,0.12)",
             }}>
-              <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: "40%", background: "linear-gradient(180deg, rgba(0,212,168,0.08) 0%, transparent 100%)" }} />
-              <div style={{ width: 80, height: 80, borderRadius: "50%", background: "var(--teal-dim)", border: "2px dashed rgba(0,212,168,0.3)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <span style={{ fontSize: 32 }}>👤</span>
-              </div>
-              <span style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--text-muted)" }}>photo coming soon</span>
+              <img
+                src="/vinup.jpeg"
+                alt="Vinup Ram S A"
+                style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", display: "block" }}
+              />
+              <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "30%", background: "linear-gradient(0deg, rgba(10,10,15,0.6) 0%, transparent 100%)" }} />
             </div>
             <div style={{ display: "flex", gap: 8 }}>
               <span className="tag tag-teal">Bengaluru, IN</span>

@@ -2,7 +2,7 @@
 
 const experiences = [
   {
-    role: "Specialist — Risk Consulting",
+    role: "Analyst — Risk Consulting",
     company: "PricewaterhouseCoopers (PwC)",
     companyShort: "PwC",
     period: "Jul 2025 — Present",
@@ -10,8 +10,9 @@ const experiences = [
     type: "Full-time",
     accent: "teal",
     bullets: [
-      "Delivered data-driven risk assessments for a fintech client, cleaning and analyzing large structured datasets to surface actionable insights for governance and compliance decision-making.",
-      "Translated ambiguous business problems into structured analytical findings and communicated recommendations to key stakeholders across business and technical functions.",
+      "Conducted data analysis and risk assessments across 3 clients and 4 audit quarters, working with datasets exceeding 500,000 rows; used Power BI to process and visualize data beyond Excel's limits, surfacing actionable insights for governance and compliance decision-making.",
+      "Automated recurring audit workflows for 4 client products using Python, reducing manual reporting effort and improving process consistency across credit underwriting, checkout finance, and payroll functions.",
+      "Translated ambiguous business problems into structured analytical findings; communicated recommendations to a cross-functional stakeholder group of 10–15 client representatives spanning business and technical functions.",
     ],
   },
 ];

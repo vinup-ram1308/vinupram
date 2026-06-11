@@ -8,8 +8,8 @@ const certs = [
     date: "Apr 2026",
     validity: "Valid for 1 year",
     accent: "teal",
-    tags: ["Azure OpenAI", "NLP", "Computer Vision", "Generative AI"],
-    link: "#",
+    tags: ["Azure OpenAI", "NLP", "Computer Vision", "Generative AI", "Azure AI Services"],
+    link: "https://learn.microsoft.com/en-gb/users/vinupramsa-2086/credentials/d8475cfef78410c",
   },
   {
     name: "Power BI Data Analyst Associate",
@@ -18,8 +18,8 @@ const certs = [
     date: "May 2026",
     validity: "Valid for 1 year",
     accent: "amber",
-    tags: ["Power BI", "DAX", "Power Query", "BI Reporting"],
-    link: "#",
+    tags: ["Power BI", "DAX", "Power Query", "BI Reporting", "Dashboards"],
+    link: "https://learn.microsoft.com/en-gb/users/vinupramsa-2086/credentials/fdab82757bf3f1c3",
   },
   {
     name: "Associate Data Practitioner",
@@ -28,8 +28,8 @@ const certs = [
     date: "Dec 2025",
     validity: "Valid for 3 years",
     accent: "coral",
-    tags: ["BigQuery", "Vertex AI", "Cloud Storage", "Analytics"],
-    link: "#",
+    tags: ["BigQuery", "Vertex AI", "MCP", "Cloud Storage", "Analytics"],
+    link: "https://www.credly.com/badges/8638b3ac-f836-4730-8718-8fdfc1a31a1a/public_url",
   },
 ];
 
@@ -50,7 +50,7 @@ export default function Certifications() {
             Credentials &amp; <span style={{ color: "var(--amber)" }}>badges.</span>
           </h2>
           <p style={{ fontSize: 15, color: "var(--text-secondary)", marginTop: 16 }}>
-            Industry-verified skills — the kind that actually mean something on both cloud platforms.
+            Industry-verified skills across both major cloud platforms — the kind that show up in interviews.
           </p>
         </div>
 
@@ -59,7 +59,6 @@ export default function Certifications() {
             const a = accentStyle[c.accent];
             return (
               <div key={i} className="card" style={{ padding: "24px", position: "relative", overflow: "hidden" }}>
-                {/* Accent top bar */}
                 <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: a.color }} />
 
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 16 }}>
@@ -79,7 +78,11 @@ export default function Certifications() {
                   {c.tags.map(t => <span key={t} className={`tag ${a.tag}`}>{t}</span>)}
                 </div>
 
-                <a href={c.link} style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: a.color, textDecoration: "none", display: "flex", alignItems: "center", gap: 4 }}>
+                <a href={c.link} target="_blank" rel="noopener noreferrer"
+                  style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: a.color, textDecoration: "none", display: "flex", alignItems: "center", gap: 4, transition: "opacity 0.2s" }}
+                  onMouseEnter={e => (e.currentTarget as HTMLAnchorElement).style.opacity = "0.7"}
+                  onMouseLeave={e => (e.currentTarget as HTMLAnchorElement).style.opacity = "1"}
+                >
                   View Certificate ↗
                 </a>
               </div>
