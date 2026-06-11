@@ -22,7 +22,7 @@ export default function About() {
           </h2>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "start" }}>
+        <div className="about-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "start" }}>
           <div>
             <p style={{ fontSize: 17, color: "var(--text-secondary)", lineHeight: 1.85, marginBottom: 24 }}>
               I'm a Computer Science, Mathematics, and Statistics graduate currently navigating the world of Risk Consulting at PwC — while keeping one eye firmly on the data horizon.
@@ -54,7 +54,7 @@ export default function About() {
         </div>
       </div>
 
-      <style>{`@media (max-width: 768px) { #about .two-col { grid-template-columns: 1fr !important; } }`}</style>
+      <style>{`@media (max-width: 768px) { .about-grid { grid-template-columns: 1fr !important; gap: 32px !important; } }`}</style>
     </section>
   );
 }
